@@ -1,0 +1,34 @@
+{
+  "name": "landing-frutas-torres",
+  "version": "1.0.0",
+  "description": "Landing para Frutas Torres",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "prod": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --prod",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "build": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/crlstve/landing-frutas-torres.git"
+  },
+  "keywords": [
+    "Langing",
+    "simple",
+    "tailwindcss"
+  ],
+  "author": "c.esteve",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crlstve/landing-frutas-torres/issues"
+  },
+  "homepage": "https://github.com/crlstve/landing-frutas-torres#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.6",
+    "@tailwindcss/vite": "^4.0.6"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.0.6"
+  }
+}
