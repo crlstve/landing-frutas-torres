@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+
+@layer base {
+    @font-face {
+        font-family: 'Melvins One';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Melvin One'), local('Roboto-Regular'), url(./assets/fonts/Melvins-One.ttf) format('truetype');
+    }
+    
+    .bg-green{
+        background-color: #0F5C40;
+    }
+}
