@@ -518,6 +518,12 @@
   }
 }
 @layer utilities {
+  .static {
+    position: static;
+  }
+  .z-50 {
+    z-index: 50;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -536,11 +542,29 @@
       max-width: 96rem;
     }
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .-mt-36 {
+    margin-top: calc(var(--spacing) * -36);
+  }
+  .-mt-40 {
+    margin-top: calc(var(--spacing) * -40);
+  }
+  .-mt-44 {
+    margin-top: calc(var(--spacing) * -44);
+  }
+  .mt-24 {
+    margin-top: calc(var(--spacing) * 24);
+  }
+  .-mb-32 {
+    margin-bottom: calc(var(--spacing) * -32);
+  }
+  .mb-44 {
+    margin-bottom: calc(var(--spacing) * 44);
+  }
   .flex {
     display: flex;
-  }
-  .h-full {
-    height: 100%;
   }
   .w-full {
     width: 100%;
@@ -548,53 +572,179 @@
   .flex-col {
     flex-direction: column;
   }
+  .flex-row {
+    flex-direction: row;
+  }
   .items-center {
     align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
+  }
+  .justify-between {
+    justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
   }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
   .scroll-smooth {
     scroll-behavior: smooth;
+  }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
+  .rounded-sm {
+    border-radius: var(--radius-sm);
+  }
+  .rounded-t-4xl {
+    border-top-left-radius: var(--radius-4xl);
+    border-top-right-radius: var(--radius-4xl);
+  }
+  .rounded-t-\[15\%\] {
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+  }
+  .rounded-t-\[25\%\] {
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+  }
+  .rounded-t-\[30\%\] {
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
   }
   .rounded-b-full {
     border-bottom-right-radius: calc(infinity * 1px);
     border-bottom-left-radius: calc(infinity * 1px);
   }
-  .object-cover {
-    object-fit: cover;
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-gray-200 {
+    border-color: var(--color-gray-200);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-top {
+    background-position: top;
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .px-7 {
+    padding-inline: calc(var(--spacing) * 7);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
+  .pt-8 {
+    padding-top: calc(var(--spacing) * 8);
+  }
+  .pt-56 {
+    padding-top: calc(var(--spacing) * 56);
+  }
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
+  }
+  .text-center {
+    text-align: center;
   }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .leading-none {
+    --tw-leading: 1;
+    line-height: 1;
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .text-red-500 {
-    color: var(--color-red-500);
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .text-slate-200 {
+    color: var(--color-slate-200);
+  }
+  .text-slate-400 {
+    color: var(--color-slate-400);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
   }
-  .md\:text-3xl {
+  .md\:w-1\/12 {
     @media (width >= 48rem) {
-      font-size: var(--text-3xl);
-      line-height: var(--tw-leading, var(--text-3xl--line-height));
+      width: calc(1/12 * 100%);
     }
   }
-  .xl\:text-4xl {
-    @media (width >= 80rem) {
-      font-size: var(--text-4xl);
-      line-height: var(--tw-leading, var(--text-4xl--line-height));
+  .md\:w-3\/12 {
+    @media (width >= 48rem) {
+      width: calc(3/12 * 100%);
+    }
+  }
+  .md\:w-\[28\%\] {
+    @media (width >= 48rem) {
+      width: 28%;
+    }
+  }
+  .md\:w-fit {
+    @media (width >= 48rem) {
+      width: fit-content;
+    }
+  }
+  .md\:max-w-4\/12 {
+    @media (width >= 48rem) {
+      max-width: calc(4/12 * 100%);
+    }
+  }
+  .md\:text-8xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-8xl);
+      line-height: var(--tw-leading, var(--text-8xl--line-height));
     }
   }
 }
@@ -602,11 +752,28 @@
   @font-face {
     font-family: 'Melvins One';
     font-style: normal;
-    font-weight: 400;
-    src: local('Melvin One'), local('Roboto-Regular'), url(./assets/fonts/Melvins-One.ttf) format('truetype');
+    src: local('Melvins One'), local('Roboto-Regular'), url(../public/assets/fonts/Melvins-One.ttf) format('truetype');
+  }
+  * {
+    font-family: 'Poppins','Montserrat', sans-serif;
+  }
+  h1 {
+    font-family: 'Melvins One';
   }
   .bg-green {
     background-color: #0F5C40;
+  }
+  .bg-beige {
+    background-color: #FFE6B8;
+  }
+  .bg-orange {
+    background-color: #EE7003;
+  }
+  .color-green {
+    color: #0F5C40;
+  }
+  .color-beige {
+    color: #FFE6B8;
   }
 }
 @keyframes spin {
@@ -634,6 +801,15 @@
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-font-weight {
   syntax: "*";

@@ -28,10 +28,6 @@
     <link rel="stylesheet" href="../src/output.css" type="text/css">
     <!--<script defer type="module" src="./assets/js/index.js"></script> -->
 </head>
-<header class="w-full rounded-t-0 rounded-b-full bg-green">
-    <div class="w-full py-4 container">
-        <img src="./assets/img/torres-logo.png" alt="logo" class="w-full h-full object-cover">
-    </div>
-</header>
+
 <body>
     

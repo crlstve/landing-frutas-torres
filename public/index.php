@@ -1,13 +1,17 @@
-<?= require_once("partials/header.php"); ?>
+<?php require_once("../functions.php"); ?>
+
+<?php require_once("partials/header.php"); ?>
 
   <main class="flex flex-col items-center justify-center">
     
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <?php require_once("partials/hero.php"); ?>
+    
+    <?php require_once("partials/hand-orange.php"); ?>
 
-    <p class="text-2xl md:text-3xl xl:text-4xl font-bold text-red-500">Test</p>
+    <?php require_once("partials/bg-image.php"); ?>
+
+    <?php require_once("partials/grid.php"); ?>
 
   </main>
 
-<?= require_once("partials/footer.php"); ?>
+<?php require_once("partials/footer.php"); ?>
