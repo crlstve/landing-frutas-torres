@@ -587,6 +587,9 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
@@ -620,6 +623,9 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -638,6 +644,9 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
@@ -650,11 +659,11 @@
   .py-32 {
     padding-block: calc(var(--spacing) * 32);
   }
-  .pt-8 {
-    padding-top: calc(var(--spacing) * 8);
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
   }
-  .pb-2 {
-    padding-bottom: calc(var(--spacing) * 2);
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
   }
   .text-center {
     text-align: center;
@@ -774,6 +783,20 @@
   }
   h1 {
     font-family: 'Melvins One';
+  }
+  h1:before {
+    content: '"';
+    font-family: 'Melvins One';
+    position: absolute;
+    top: 0;
+    left: 3rem;
+  }
+  h1:after {
+    content: '"';
+    font-family: 'Melvins One';
+    position: absolute;
+    bottom: 0;
+    right: 3rem;
   }
   .bg-green {
     background-color: #0F5C40;

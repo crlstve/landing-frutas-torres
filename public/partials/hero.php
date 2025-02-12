@@ -8,8 +8,8 @@
 
     <section class="w-full py-4 container flex flex-col lg:flex-row items-end justify-between background-image mx-auto mt-24 mb-44 " >
                     
-            <div class="w-full lg:w-3/12 flex flex-col z-50">
-                <p class="text-center text-lg text-white">
+            <div class="w-full lg:w-3/12 flex flex-col z-50 gap-2">
+                <p class="text-center text-lg text-white px-3">
                     <?= mb_strtoupper("Una canción para difundir el sabor que tiene que ser."); ?>
                 </p>
                 <p class="text-center text-lg text-white">
@@ -17,9 +17,9 @@
                 </p>
             </div>
 
-            <div class="bg-orange rounded-3xl text-center w-full lg:w-fit lg:max-w-4/12 px-8 pt-8 pb-2 -mb-32 z-50">
+            <div class="bg-orange rounded-3xl text-center w-full lg:w-fit lg:max-w-4/12 px-8 pt-10 pb-4 -mb-32 z-50">
 
-                <h1 class="text-white text-3xl lg:text-8xl leading-none text-balance ">PRESUME DE FRUTA</h1>
+                <h1 class="text-white text-3xl lg:text-8xl leading-none text-balance relative">PRESUME DE FRUTA</h1>
 
             </div>
 
@@ -32,11 +32,11 @@
                 </a>
 
                 <form ie="form" action="submit.php" method="post" class="flex flex-col gap-4 ">
-                    <input type="text" class="rounded-sm border border-gray-200 py-4 px-6 text-slate-200 w-full" palceholder="Centro educativo">
-                    <input type="text" class="rounded-sm border border-gray-200 py-4 px-6 text-slate-200 w-full" palceholder="Centro educativo">
-                    <input type="phone" class="rounded-sm border border-gray-200 py-4 px-6 text-slate-200 w-full" palceholder="Centro educativo">
-                    <input type="email" class="rounded-sm border border-gray-200 py-4 px-6 text-slate-200 w-full" palceholder="Centro educativo">
-                    <input type="text" class="rounded-sm border border-gray-200 py-4 px-6 text-slate-200 w-full" palceholder="Centro educativo">
+                    <input type="text" class="rounded-sm border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
+                    <input type="text" class="rounded-sm border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
+                    <input type="phone" class="rounded-sm border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
+                    <input type="email" class="rounded-sm border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
+                    <input type="text" class="rounded-sm border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
                     <button class="bg-green text-white px-4 py-2 rounded-sm font-bold">Mi cole quiere participar</button>
                     <div>
                         <input id="bases" type="checkbox" class="rounded-sm border border-gray-200 py-2 px-4 text-slate-200" palceholder="Centro educativo">
