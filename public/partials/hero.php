@@ -24,27 +24,22 @@
             </div>
 
             <div class="w-full lg:w-[28%] flex flex-col bg-white px-10 py-8 rounded-3xl gap-6 z-50">
-                <p class="text-center color-green px-7 text-lg">
-                    Inscribe a tu colegio rellenando el formulario. En breve, contactaremos contigo.
-                </p>
-                <a href="" target="_blank" class="text-center color-green underline px-7 text-lg">
-                    Descarga aquí la letra e instrumental de la canción
-                </a>
-
+                <p class="text-center color-green text-lg wrap-balance">Inscribe a tu colegio<br>rellenando el formulario.<br>En breve, contactaremos contigo.</p>
+                <a href="" target="_blank" class="text-center color-green underline mx-7 text-lg w-fit mx-auto font-semibold">Descarga aquí la letra<br>e instrumental de la canción</a>
                 <form ie="form" action="submit.php" method="post" class="flex flex-col gap-4 ">
-                    <input type="text" class="rounded-sm border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
-                    <input type="text" class="rounded-sm border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
-                    <input type="phone" class="rounded-sm border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
-                    <input type="email" class="rounded-sm border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
-                    <input type="text" class="rounded-sm border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
-                    <button class="bg-green text-white px-4 py-2 rounded-sm font-bold">Mi cole quiere participar</button>
-                    <div>
-                        <input id="bases" type="checkbox" class="rounded-sm border border-gray-200 py-2 px-4 text-slate-200" palceholder="Centro educativo">
+                    <input type="text" class="rounded-lg border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
+                    <input type="text" class="rounded-lg border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
+                    <input type="phone" class="rounded-lg border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
+                    <input type="email" class="rounded-lg border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
+                    <input type="text" class="rounded-lg border border-gray-200 py-3 px-6 text-slate-200 w-full" palceholder="Centro educativo">
+                    <button class="bg-green text-white px-4 py-3 rounded-lg font-bold">Mi cole quiere participar</button>
+                    <div class="flex flex-row item-center gap-2">
+                        <input id="bases" type="checkbox" class="rounded-lg border border-gray-200 py-2 px-4 text-slate-200" palceholder="Centro educativo">
                         <label for="bases" class="text-slate-400 text-sm">He leído y acepto las bases del concurso.</label>
                     </div>
-                    <div>
-                        <input id="bases" type="checkbox" class="rounded-sm border border-gray-200 py-2 px-4 text-slate-200" palceholder="Centro educativo">
-                        <label for="bases">He leído y acepto las políticas de privacidad.</label>
+                    <div class="flex flex-row item-center gap-2">
+                        <input id="privacidad" type="checkbox" class="rounded-lg border border-gray-200 py-2 px-4 text-slate-200" palceholder="Centro educativo">
+                        <label class="text-slate-400 text-sm" for="privacidad">He leído y acepto las políticas de privacidad.</label>
                     </div>
                 </form>
             </div>
