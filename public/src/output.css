@@ -752,7 +752,7 @@
   @font-face {
     font-family: 'Melvins One';
     font-style: normal;
-    src: local('Melvins One'), local('Roboto-Regular'), url(../public/assets/fonts/Melvins-One.ttf) format('truetype');
+    src: local('Melvins One'), local('Roboto-Regular'), url(../assets/fonts/Melvins-One.ttf) format('truetype');
   }
   * {
     font-family: 'Poppins','Montserrat', sans-serif;
