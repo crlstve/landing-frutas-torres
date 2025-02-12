@@ -587,6 +587,9 @@
   .grid {
     display: grid;
   }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
   .w-32 {
     width: calc(var(--spacing) * 32);
   }
