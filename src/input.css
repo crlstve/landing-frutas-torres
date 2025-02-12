@@ -29,6 +29,20 @@
         color: #FFE6B8;
     }
 
+    #hand:after{
+        content: "";
+        background-image: url(../img/hand.png);
+        position: absolute;
+        background-repeat: no-repeat;
+        bottom: 0;
+        left: 0;
+        aspect-ratio: 1 / 1;
+        background-size: 650px 650px;
+        display: inline-block;
+        width: 33%;
+        height: 100%;
+    }
+
     /*#hero:after{
         content: '';
         position: absolute;
