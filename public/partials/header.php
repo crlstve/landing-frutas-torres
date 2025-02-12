@@ -25,7 +25,7 @@
     <meta property="og:image:height" content="400" />
     <meta property="og:image:type" content="image/png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="../src/output.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/theme.css" type="text/css">
     <!--<script defer type="module" src="./assets/js/index.js"></script> -->
 </head>
 
