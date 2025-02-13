@@ -32,21 +32,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->addReplyTo($_POST["email"], $_POST["name"]);
         }
 
-        $mail->Subject = "Nuevo mensaje de contacto";
+        $mail->Subject = "Nuevo registro de participante";
         $mail->Body    = "Nombre: " . htmlspecialchars($_POST["name"]) . 
+                        "\nCentro: " . htmlspecialchars($_POST["school"]) . 
                          "\nCorreo: " . htmlspecialchars($_POST["email"]) . 
+                         "\nTeléfono: " . htmlspecialchars($_POST["phone"]) .
                          "\nMensaje:\n" . htmlspecialchars($_POST["message"]);
 
-        // Enviar
-        if ($mail->send()) {
-            echo "Correo enviado correctamente.";
-        } else {
-            echo "Error al enviar el correo.";
-        }
     } catch (Exception $e) {
         echo "Error: {$mail->ErrorInfo}";
     }
-} else {
-    echo "Acceso no autorizado.";
 }
 ?>
