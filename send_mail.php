@@ -39,8 +39,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                          "\nTeléfono: " . htmlspecialchars($_POST["phone"]) .
                          "\nMensaje:\n" . htmlspecialchars($_POST["message"]);
 
+        // Enviar
+        if ($mail->send()) {
+            echo "Correo enviado correctamente.";
+        } else {
+            echo "Error al enviar el correo.";
+        }
     } catch (Exception $e) {
         echo "Error: {$mail->ErrorInfo}";
     }
+} else {
+    echo "Acceso no autorizado.";
 }
 ?>

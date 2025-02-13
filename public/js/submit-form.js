@@ -1,14 +1,3 @@
-function showNotification(message, isSuccess = true) {
-    let notification = document.getElementById("notification");
-    notification.textContent = message;
-    notification.classList.remove("hidden", "bg-green-500", "bg-red-500");
-    notification.classList.add(isSuccess ? "bg-green-500" : "bg-red-500");
-
-    setTimeout(() => {
-        notification.classList.add("hidden");
-    }, 3000); // Ocultar después de 3 segundos
-}
-
 document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -27,7 +16,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     });
 
     if (!valid) {
-        showNotification("Por favor, completa todos los campos obligatorios.", false);
+        alert("Por favor, completa todos los campos obligatorios.");
         return;
     }
 
@@ -38,10 +27,10 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     })
         .then(response => response.text())
         .then(data => {
-            showNotification(data, data.includes("Correo enviado correctamente"));
+            alert(data); // Muestra la respuesta en un alert
             if (data.includes("Correo enviado correctamente")) {
-                form.reset();
+                form.reset(); // Limpia el formulario si el envío fue exitoso
             }
         })
-        .catch(error => showNotification("Error al enviar el formulario.", false));
+        .catch(error => alert("Error al enviar el formulario."));
 });
