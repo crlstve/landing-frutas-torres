@@ -6,7 +6,7 @@
         </div>
     </header>
 
-    <section class="w-full py-4 container flex flex-col lg:flex-row items-center lg:items-end justify-between background-image mx-auto mt-48 lg:mt-24 lg:mb-44 " >
+    <section class="w-full py-4 lg:container flex flex-col lg:flex-row items-center lg:items-end justify-between background-image mx-auto mt-48 lg:mt-24 lg:mb-44 " >
                     
             <div class="w-full lg:w-3/12 flex flex-col z-40 gap-2 order-2 lg:order-1 bg-beige lg:bg-transparent px-8 lg:px-0 pt-24 pb-12 lg:pt-0 lg:pb-0 -mt-16 lg:-mt-0">
                 <p class="text-center text-lg color-green lg:text-white px-3">
