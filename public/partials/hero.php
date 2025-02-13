@@ -17,7 +17,7 @@
                 </p>
             </div>
 
-            <div class="bg-orange rounded-3xl text-center w-10/12 lg:w-fit lg:max-w-4/12 px-8 pt-10 pb-4 -mt-24 lg:mt-0lg:-mb-32 z-50 order-1 lg:order-2">
+            <div class="bg-orange rounded-3xl text-center w-10/12 lg:w-fit lg:max-w-4/12 px-8 pt-10 pb-4 -mt-24 lg:mt-0 lg:-mb-32 z-50 order-1 lg:order-2">
 
                 <h1 class="text-white text-6xl lg:text-8xl leading-none text-balance relative">PRESUME DE FRUTA</h1>
 
