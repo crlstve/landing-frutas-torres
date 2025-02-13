@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Host       = 'server.idital.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'participa@presumedefrutacontorres.com';
-        $mail->Password   = '5#3Tv3kLKh';
+        $mail->Password   = 'z68e%39Gd';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
