@@ -3,6 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . 'credenciales.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validar datos
@@ -16,16 +17,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Configuración del servidor SMTP
         $mail->isSMTP();
-        $mail->Host       = 'server.idital.com';
+        $mail->Host       = $host;
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'participa@presumedefrutacontorres.com';
-        $mail->Password   = 'z68e%39Gd';
+        $mail->Username   = $user;
+        $mail->Password   = $password;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
         // Configurar el correo
-        $mail->setFrom('participa@presumedefrutacontorres.com', 'Frutas Torres');
-        $mail->addAddress('participa@presumedefrutacontorres.com');
+        $mail->setFrom($email, 'Frutas Torres');
+        $mail->addAddress($email);
 
         // Validar el email antes de agregarlo como reply-to
         if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
