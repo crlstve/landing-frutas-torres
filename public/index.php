@@ -1,6 +1,6 @@
 <?php require_once("../functions.php"); ?>
 
-<?php require_once("partials/header.php"); ?>
+<?php require_once("partials/head.php"); ?>
 
   <main class="flex flex-col items-center justify-center">
     

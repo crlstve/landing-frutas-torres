@@ -17,14 +17,12 @@
         font-family: 'Melvins One';
         position: absolute;
         top:0;
-        left:3rem;
     }
     h1:after{
         content:'"';
         font-family:'Melvins One';
         position: absolute;
         bottom: 0;
-        right: 3rem;
     }
     .bg-green{
         background-color: #0F5C40;
@@ -41,19 +39,51 @@
     .color-beige{
         color: #FFE6B8;
     }
-
-    #hand:after{
-        content: "";
-        background-image: url(../img/hand.png);
-        position: absolute;
-        background-repeat: no-repeat;
-        bottom: -10%;
-        left: 0;
-        background-size: 600px 600px;
-        width:33%;
-        height: 100%;
-        display: inline-block;
-        z-index: 10;
+ @media(max-width:1024px) {
+    #hero{
+        background: linear-gradient(180deg, rgba(2, 0, 36, 0) 50%, rgba(15, 92, 64, 1) 100%), url(../img/bg-hero.jpg);
+        background-size: contain;
+        background-position: 0 40px;  
+        background-repeat: no-repeat
     }
+        h1:before {
+            left: 1.5rem;
+        }
+    
+        h1:after {
+            right: 1.5rem;
+        }
 
+
+
+}
+        @media(min-width:1024px){
+                    h1:before {
+                            left: 3rem;
+                        }
+                    
+                        h1:after {
+                            right: 3rem;
+                        }
+            #hand:after{
+                content: "";
+                background-image: url(../img/hand.png);
+                position: absolute;
+                background-repeat: no-repeat;
+                bottom: -10%;
+                left: 0;
+                background-size: 600px 600px;
+                width:33%;
+                height: 100%;
+                display: inline-block;
+                z-index: 10;
+            }
+                #hero {
+                    background: linear-gradient(180deg, rgba(2, 0, 36, 0) 50%, rgba(15, 92, 64, 1) 100%), url(../img/bg-hero.jpg);
+                    background-size: cover;
+                    background-position: top center;
+                }
+        }
+
+    
 }
