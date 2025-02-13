@@ -6,8 +6,8 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     let formData = new FormData(form);
 
     // Validar campos vacíos
-    form.querySelectorAll("input, textarea").forEach(input => {
-        if (input.hasAttribute("required") && !input.value.trim()) {
+    form.querySelectorAll("input[required], textarea[required]").forEach(input => {
+        if (!input.value.trim()) {
             input.style.borderColor = "red";
             valid = false;
         } else {
@@ -16,7 +16,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     });
 
     if (!valid) {
-        alert("Por favor, completa todos los campos obligatorios.");
+        showNotification("Por favor, completa todos los campos obligatorios.", false);
         return;
     }
 
@@ -25,12 +25,23 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
         method: "POST",
         body: formData
     })
-        .then(response => response.text())
+        .then(response => response.json()) // Convertimos a JSON
         .then(data => {
-            alert(data); // Muestra la respuesta en un alert
-            if (data.includes("Correo enviado correctamente")) {
-                form.reset(); // Limpia el formulario si el envío fue exitoso
+            showNotification(data.message, data.status === "success");
+            if (data.status === "success") {
+                form.reset();
             }
         })
-        .catch(error => alert("Error al enviar el formulario."));
+        .catch(() => showNotification("Error al enviar el formulario.", false));
 });
+
+function showNotification(message, isSuccess) {
+    let notification = document.getElementById("notification");
+    notification.textContent = message;
+    notification.classList.remove("hidden", "bg-green-500", "bg-red-500");
+    notification.classList.add(isSuccess ? "bg-green-500" : "bg-red-500");
+
+    setTimeout(() => {
+        notification.classList.add("hidden");
+    }, 3000);
+}

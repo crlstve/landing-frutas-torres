@@ -7,7 +7,7 @@ require __DIR__ . '/vendor/autoload.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validar datos
     if (empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["message"])) {
-        echo "Todos los campos son obligatorios.";
+        echo json_encode(["status" => "error", "message" => "Todos los campos son obligatorios."]);
         exit;
     }
 
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Configurar el correo
         $mail->setFrom('participa@presumedefrutacontorres.com', 'Frutas Torres');
-        $mail->addAddress('carles.esteve@idital.com');
+        $mail->addAddress('participa@presumedefrutacontorres.com');
 
         // Validar el email antes de agregarlo como reply-to
         if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
@@ -35,20 +35,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Subject = "Nuevo registro de participante";
         $mail->Body    = "Nombre: " . htmlspecialchars($_POST["name"]) . 
                         "\nCentro: " . htmlspecialchars($_POST["school"]) . 
-                         "\nCorreo: " . htmlspecialchars($_POST["email"]) . 
-                         "\nTeléfono: " . htmlspecialchars($_POST["phone"]) .
-                         "\nMensaje:\n" . htmlspecialchars($_POST["message"]);
+                        "\nCorreo: " . htmlspecialchars($_POST["email"]) . 
+                        "\nTeléfono: " . htmlspecialchars($_POST["phone"]) .
+                        "\nMensaje:\n" . htmlspecialchars($_POST["message"]);
 
         // Enviar
         if ($mail->send()) {
-            echo "Correo enviado correctamente.";
+            echo json_encode(["status" => "success", "message" => "Correo enviado correctamente."]);
         } else {
-            echo "Error al enviar el correo.";
+            echo json_encode(["status" => "error", "message" => "No se pudo enviar el correo."]);
         }
     } catch (Exception $e) {
-        echo "Error: {$mail->ErrorInfo}";
+        echo json_encode(["status" => "error", "message" => "Error: {$mail->ErrorInfo}"]);
     }
-} else {
-    echo "Acceso no autorizado.";
 }
 ?>
