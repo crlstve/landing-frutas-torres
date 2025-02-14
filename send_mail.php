@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\Exception;
 require __DIR__ . '/vendor/autoload.php';
 require  'credenciales.php';
 // Configurar encabezado para JSON
-header('Content-Type: application/json');
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validar datos
