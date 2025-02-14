@@ -1,9 +1,4 @@
 <?php
-//evitar que se pueda acceder directamente al archivo
-  if ($_SERVER['SCRIPT_FILENAME'] == __FILE__) {
-    header('Location: 404.php');
-    exit;
-  }
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
