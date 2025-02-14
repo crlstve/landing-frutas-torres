@@ -3,8 +3,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require __DIR__ . '/vendor/autoload.php';
-require  'credenciales.php';
-// Configurar encabezado para JSON
+require 'credenciales.php';
+
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -13,7 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode(["status" => "error", "message" => "Todos los campos son obligatorios."]);
         exit;
     }
-
+// Configurar encabezado para JSON
+header('Content-Type: application/json');
     $mail = new PHPMailer(true);
 
     try {
@@ -44,43 +45,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Enviar
         if ($mail->send()) {
-            echo "
-                <div id='response' class='absolute w-screen h-full top-0 left-0 flex flex-col items-center justify-center' style='z-index: 100; background-color: rgba(0,0,0,0.5);'>
-                    <div class='bg-green text-white p-6 rounded-lg shadow-lg w-10/12 lg:w-3/12 text-center'>
-                        Correo enviado correctamente.
-                    </div>
-                </div>
-                <script>
-                    document.getElementById('response').addEventListener('click', function () {
-                        this.classList.add('hidden'); // Oculta el div completo al hacer clic
-                    });
-                </script>
-                ";
+            echo json_encode(["status" => "success", "message" => "Correo enviado correctamente."]);
         } else {
-            echo "
-                <div id='response' class='absolute w-screen h-full top-0 left-0 flex flex-col items-center justify-center' style='z-index: 100;background-color: rgba(0,0,0,0.5);'>
-                    <div class='bg-orange text-white p-6 rounded-lg shadow-lg w-10/12 lg:w-3/12 text-center'>No se pudo enviar el correo.</div>
-                </div>
-                               <script>
-                    document.getElementById('response').addEventListener('click', function () {
-                        this.classList.add('hidden'); // Oculta el div completo al hacer clic
-                    });
-                </script> 
-                
-                ";
+            echo json_encode(["status" => "error", "message" => "No se pudo enviar el correo."]);
         }
     } catch (Exception $e) {
-            echo "
-                <div id='response' class='absolute w-screen h-full top-0 left-0 flex flex-col items-center justify-center' style='z-index: 100;background-color: rgba(0,0,0,0.5);'>
-                    <div class='bg-orange text-white p-6 rounded-lg shadow-lg w-10/12 lg:w-3/12 text-center'>Error: {$mail->ErrorInfo}</div>
-                </div>
-                                <script>
-                    document.getElementById('response').addEventListener('click', function () {
-                        this.classList.add('hidden'); // Oculta el div completo al hacer clic
-                    });
-                </script>
-                
-                ";
+        echo json_encode(["status" => "error", "message" => "Error: {$mail->ErrorInfo}"]);
     }
 }
 ?>

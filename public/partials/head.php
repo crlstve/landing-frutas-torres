@@ -24,7 +24,7 @@
             <meta property="og:image:type" content="image/png" />
             <meta name="twitter:card" content="summary_large_image" />
             <link rel="stylesheet" href="./assets/css/theme.css" type="text/css">
-            <!--<script defer type="module" src="./assets/js/submit-form.js"></script>-->
+            <script defer type="module" src="./assets/js/submit-form.js"></script>
         </head>
         <body>
     

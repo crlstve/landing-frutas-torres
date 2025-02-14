@@ -1,12 +1,12 @@
 <div id="hero" class="w-full justify-center">
 
     <header class="w-full rounded-t-0 rounded-b-4xl lg:rounded-b-[6rem] bg-green z-50">
-        <div class="w-full py-6 lg:py-8 container flex flex-row items-center justify-center mx-auto">
-            <img src="./assets/img/torres-logo.png" alt="logo" class="w-20 lg:w-1/12">
+        <div class="w-full py-6 lg:py-6 container flex flex-row items-center justify-center mx-auto">
+            <img src="./assets/img/torres-logo.png" alt="logo" class="w-20 lg:w-24">
         </div>
     </header>
 
-    <section class="w-full py-4 lg:container flex flex-col lg:flex-row items-center lg:items-end justify-between background-image mx-auto mt-48 lg:mt-24 lg:mb-44 " >
+    <section class="w-full py-4 lg:container flex flex-col lg:flex-row items-center lg:items-end justify-between background-image mx-auto mt-48 lg:mt-8 lg:mb-44 " >
                     
             <div class="w-full lg:w-3/12 flex flex-col z-40 gap-2 order-2 lg:order-1 bg-beige lg:bg-transparent px-8 lg:px-0 pt-24 pb-12 lg:pt-0 lg:pb-0 -mt-16 lg:-mt-0">
                 <p class="text-center text-lg color-green lg:text-white px-3">
@@ -17,7 +17,7 @@
                 </p>
             </div>
 
-            <div class="bg-orange rounded-3xl text-center w-10/12 lg:w-fit lg:max-w-4/12 px-8 pt-10 pb-4 -mt-24 lg:mt-0 lg:-mb-32 z-50 order-1 lg:order-2">
+            <div class="bg-orange rounded-3xl text-center w-10/12 lg:w-fit lg:max-w-4/12 px-8 pt-10 pb-4 -mt-24 lg:mt-0 lg:-mb-24 z-50 order-1 lg:order-2">
 
                 <h1 class="text-white text-6xl lg:text-8xl leading-none text-balance relative">PRESUME DE FRUTA</h1>
 
@@ -43,7 +43,7 @@
                             <label class="text-gray-400 text-sm" for="privacidad">He leído y acepto las <a href="https://frutastorres.com/politica-de-privacidad/" target="_blank" class="text-green underline">políticas de privacidad</a>.</label>
                         </div>
 
-                        <button type="submit" class="bg-green text-white px-4 py-3 rounded-lg font-bold">Mi cole quiere participar</button>
+                        <button type="submit" class="bg-green text-white px-4 py-3 rounded-lg font-bold hover:cursor-pointer">Mi cole quiere participar</button>
                     </form>
             </div>
 <div id="notification" class="hidden fixed top-4 right-4 p-3 rounded text-white shadow-lg"></div>

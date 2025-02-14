@@ -12,7 +12,14 @@
     h1,h2,h2>span{
         font-family: 'Melvins One';
     }
-
+      h1:before,h1:after {
+          content: '"';
+          font-family: 'Melvins One';
+          position: absolute;
+      }
+      h1:before{
+        transform:translateX(-100%);
+      }
     .bg-green{
         background-color: #0F5C40;
     }
@@ -35,13 +42,6 @@
         background-position: 0 40px;  
         background-repeat: no-repeat
     }
-        h1:before {
-            left: 1.5rem;
-        }
-    
-        h1:after {
-            right: 1.5rem;
-        }
 }
         @media(min-width:1024px){
             #hand:after{
@@ -64,24 +64,4 @@
                 }
         }
 
-
-            @media(min-width:1524px) {
-                h1:before,
-                h1:after {
-                    content: '"';
-                    font-family: 'Melvins One';
-                    position: absolute;
-        
-                }
-        
-                h1:before {
-                    top: 0;
-                    left: 3rem;
-                }
-        
-                h1:after {
-                    bottom: 0;
-                    right: 3rem;
-                }
-            }
 }
