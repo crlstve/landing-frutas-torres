@@ -27,20 +27,20 @@
                 <p class="text-center color-green text-lg wrap-balance">Inscribe a tu colegio<br>rellenando el formulario.<br>En breve, contactaremos contigo.</p>
                 <a href="" target="_blank" class="text-center color-green underline mx-7 text-lg w-fit mx-auto font-semibold">Descarga aquí la letra<br>e instrumental de la canción</a>
                     <form id="contact-form" method="post" class="flex flex-col gap-4">
-                        <input type="text" name="name" class="rounded-lg border border-gray-200 py-3 px-6 text-slate-200 w-full" placeholder="Nombre" required>
-                        <input type="text" name="school" class="rounded-lg border border-gray-200 py-3 px-6 text-slate-200 w-full" placeholder="Centro educativo" required>
-                        <input type="tel" name="phone" class="rounded-lg border border-gray-200 py-3 px-6 text-slate-200 w-full" placeholder="Teléfono" required>
-                        <input type="email" name="email" class="rounded-lg border border-gray-200 py-3 px-6 text-slate-200 w-full" placeholder="Correo electrónico" required>
-                        <textarea name="message" class="rounded-lg border border-gray-200 py-3 px-6 text-slate-200 w-full" placeholder="Mensaje" required></textarea>
+                        <input type="text" name="name" class="rounded-lg border border-gray-400 py-3 px-6 text-gray-400 w-full" placeholder="Nombre" required>
+                        <input type="text" name="school" class="rounded-lg border border-gray-400 py-3 px-6 text-gray-400 w-full" placeholder="Centro educativo" required>
+                        <input type="tel" name="phone" class="rounded-lg border border-gray-400 py-3 px-6 text-gray-400 w-full" placeholder="Teléfono" required>
+                        <input type="email" name="email" class="rounded-lg border border-gray-400 py-3 px-6 text-gray-400 w-full" placeholder="Correo electrónico" required>
+                        <textarea name="message" class="rounded-lg border border-gray-400 py-3 px-6 text-gray-400 w-full" placeholder="Mensaje" required></textarea>
 
                         <div class="flex flex-row items-center gap-2">
                             <input id="bases" type="checkbox" name="bases" required>
-                            <label for="bases" class="text-slate-400 text-sm">He leído y acepto las bases del concurso.</label>
+                            <label for="bases" class="text-gray-400 text-sm">He leído y acepto las bases del concurso.</label>
                         </div>
 
                         <div class="flex flex-row items-center gap-2">
                             <input id="privacidad" type="checkbox" name="privacidad" required>
-                            <label class="text-slate-400 text-sm" for="privacidad">He leído y acepto las políticas de privacidad.</label>
+                            <label class="text-gray-400 text-sm" for="privacidad">He leído y acepto las <a href="https://frutastorres.com/politica-de-privacidad/" target="_blank" class="text-green underline">políticas de privacidad</a>.</label>
                         </div>
 
                         <button type="submit" class="bg-green text-white px-4 py-3 rounded-lg font-bold">Mi cole quiere participar</button>

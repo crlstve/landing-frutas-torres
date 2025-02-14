@@ -34,14 +34,3 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
         })
         .catch(() => showNotification("Error al enviar el formulario.", false));
 });
-
-function showNotification(message, isSuccess) {
-    let notification = document.getElementById("notification");
-    notification.textContent = message;
-    notification.classList.remove("hidden", "bg-green-500", "bg-red-500");
-    notification.classList.add(isSuccess ? "bg-green-500" : "bg-red-500");
-
-    setTimeout(() => {
-        notification.classList.add("hidden");
-    }, 3000);
-}
