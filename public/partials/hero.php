@@ -46,7 +46,7 @@
                         <button type="submit" class="bg-green text-white px-4 py-3 rounded-lg font-bold">Mi cole quiere participar</button>
                     </form>
             </div>
-
+<div id="notification" class="hidden fixed top-4 right-4 p-3 rounded text-white shadow-lg"></div>
     </section>
 
 </div>
