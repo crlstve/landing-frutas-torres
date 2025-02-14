@@ -6,6 +6,7 @@
             <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="author" content="c.esteve">
+            <meta name="favicon" content="https://frutastorres.com/wp-content/uploads/2024/01/cropped-cropped-favicon-192x192-1-32x32.png">
             <meta name="keyword" content="frutas, torres">
             <meta name="description" content="Frutas Torres presenta presume de frutas con Torres, un concurso para tu centro escolar.">
             <title>Presume de frutas con Torres</title>
