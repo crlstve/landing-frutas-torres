@@ -3,7 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . 'credenciales.php';
+require  'credenciales.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validar datos
